@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title>累计收益</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.picker.min.css" rel="stylesheet">
+		<link href="../../css/gray.css" rel="stylesheet">
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style>
+			.app_box_title{margin-left: 20px; margin-right: 10px;}
+			.app_top_box{background-image: url(../../images/public_bg.png);}
+		</style>
+	</head>
+
+	<body class="account-income">
+		<header class="mui-bar mui-bar-nav app_header app_nbborder app_mui_bar app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">累计收益</h1>
+		</header>
+		<div class="mui-content income_box app_mui_content0">
+			<div class="app_p20 mui-text-center app_bgf app_top_box">
+				<div class="app_f14 app_cf80 app_mt15"><span id="app_totalInt" class="app_f40">0.00</span>元</div>
+				<div class="app_f14 app_mt15">我的总收益</div>
+				<div class="app_f14 app_mt15 confirm">收益确认日：<span id="app_confirmDate"></span></div>
+			</div>
+			<div class="app_box app_mt10">
+				<div class="app_box_title app_clearfix app_pt0">
+					<div class="">
+						<span class="mui-pull-left">收益记录</span>
+						<span class="app_icon app_icon_list mui-pull-right app_title_icon" id="app_title_change" data-show="list"></span>
+						<div class="app_date_title" id="app_date_title" data-defdate="">
+							<span class="app_f14" id="app_date_title_txt"></span>
+							<span class="mui-icon mui-icon-arrowdown app_f20"></span>
+						</div>
+					</div>
+				</div>
+				<div class="app_box_con app_box_tab_con" id="app_box_calendar">
+					<div class="app_calendar_box" id="calendar">
+						<input class="datainp app_none" id="app_calendar_box" type="text" placeholder="请选择" readonly>
+					</div>
+					<div class="app_box_lenged">
+						<span class="app_ml30">
+												<span class="app_icon_point app_bgred2"></span> 沪深一号收益
+						</span>
+						<!--<span class="app_ml30">
+												<span class="app_icon_point app_bgblue2"></span> 定期收益
+						</span>-->
+					</div>
+					<div class="app_bgf app_p20 app_f15">
+						<div class="">沪深一号收益<span class="app_cred" id="app_xinIncome"></span>元</div>
+						<!--<div class=" app_mt15">定期 收益<span class="app_cred" id="app_dqIncome"></span>元</div>-->
+					</div>
+				</div>
+				<div class="app_box_con app_box_tab_con app_none" id="app_box_list">
+					<ul class="app_box_hislist" id="app_income_list">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/echarts.simple.min.js"></script>
+		<script src="../../js/component/jedate.js"></script>
+		<script src="../../js/component/mui.picker.min.js"></script>
+		<script src="../../js/account/account-income.js"></script>
+	</body>
+
+</html>

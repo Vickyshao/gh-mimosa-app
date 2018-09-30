@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>遮罩</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		html,body,.mui-content{background: transparent;}
+    		.app_signIn_dialog {position: fixed; top: 0px;left: 0px;width: 100%;height: 100%;z-index: 99999;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center; background: rgba(0, 0, 0, 0.67); display: none;opacity: 0;transition:opacity .3s;}
+			.app_signIn_dialog.app_active{display: -webkit-box;display: box;}
+			.app_signIn_dialog.app_show{opacity: 1;}
+    		/*app体验金领取弹框*/
+			.signIn_box{
+			 position: fixed;
+			 top: 50%;
+			 transform: translateY(-50%);  -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); border-radius:10px;
+			 padding-top: 12%;
+			 left: 5%;
+			 right: 5%;
+			 text-align: center;
+			 color: #fff;
+			}
+			.signIn_box p{
+				color: #fff;
+			}
+			.signIn_box .close{font-size:30px;background-size: 100%;width: 28px;height: 28px;position: absolute;right: 15%;top: 7%;}
+    		.signIn_bac{
+				background-size: cover;
+				width: 70%;
+				margin: 40px auto;
+				position: relative;
+				left: initial;
+			}
+			.signIn_bac img{
+				width: 100%;
+			}
+			.signIn_bac .expgold_amount{
+				position: absolute;
+				width: 100%;
+				left: 50%;
+				top: 66%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); 	/* IE 9 */
+				-moz-transform: translate(-50%, -50%); 	/* Firefox */
+				-webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+				-o-transform: translate(-50%, -50%); 	/* Opera */
+			}
+			.signIn_bac .expgold_amount .app_signIn_font{
+				font-weight: bold;
+				position: relative;
+				color: #0D84F2;
+				font-size: 15px;
+			}
+			/*马上使用：按钮*/
+			.signIn_bac .signIn_btn{
+				/*top: 208px;*/
+				width: 76%; 
+				height: 13%; 
+				position: absolute;
+				bottom: 10%;
+				background: gray;
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				margin-left: 11.5%;
+			}
+			.signIn_btn .signIn_signIn{
+				font-size: 18px;
+				position: relative;
+				color: white;
+				top: 26%;
+				font-weight: bold;
+			}
+    	</style>
+	</head>
+	<body>
+			<div class="app_signIn_dialog app_active app_show" id="app_maskDiv">
+			 <div class="signIn_box">
+			 	 <div class="close app_icon app_icon_close" id="app_close"></div>
+			     <div class="app_mt40 signIn_bac">
+			     	<img src="../../../images/hongbaotankuang_1@2x.png" alt="" />
+			     	<div class="expgold_amount">
+			     		<h5 class="app_signIn_font">今日红包已领完，明日清早~</h5>
+			     	</div>
+			     	<div class="signIn_btn" id="">
+				     	<span class="signIn_signIn">签到</span>
+				    </div>
+			     </div>
+		     </div>
+			</div>
+		<script src="../../../js/component/mui.min.js"></script>
+		<script src="../../../js/component/zepto.min.js"></script>
+		<script src="../../../js/component/GHutils.js"></script>
+		<script src="index-signin.js"></script>
+	</body>
+</html>

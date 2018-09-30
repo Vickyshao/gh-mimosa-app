@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>国槐金融</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.app_header{height: 44px;box-shadow: none;background: #fff;border-bottom: 1px solid #EEEEEE;}
+			.app_header.app_nbborder{border-bottom: none;}
+			#bcid {
+				width: 100%;
+				position: absolute;
+				top: 44px;
+				bottom: 44px;
+				text-align: center;
+			}
+			.tip {
+				color: #FFFFFF;
+				font-weight: bold;
+				text-shadow: 0px -1px #103E5C;
+			}
+			footer {
+				width: 100%;
+				height: 44px;
+				position: absolute;
+				bottom: 0px;
+				line-height: 44px;
+				text-align: center;
+				color: #ff9900;
+				background: #fff;
+			}
+			.fbt {
+				width: 50%;
+				height: 100%;
+				
+				float: left;
+			}
+			.fbt:active {
+			  	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+				box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+			}
+    	</style>
+	</head>
+	<body style="background-color: #000000;">
+		<header class="mui-bar mui-bar-nav app_header app_nbborder">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">扫描二维码</h1>
+		</header>
+		<div id="bcid">
+			<div style="height:40%"></div>
+			<p class="tip">...载入中...</p>
+		</div>
+		<footer>
+			<div class="fbt mui-action-back">取　消</div>
+			<div class="fbt" id="btCancel">暂　停</div>
+		</footer>
+		<script src="../../js/component/mui.min.js"></script>
+		<script>
+		var ws=null,wo=null;
+		var scan=null,domready=false,bCancel=false;
+			mui.init();
+			(function($) {
+				var SCAN = function() {
+					this.ws = null;
+					return this;
+				}
+				SCAN.prototype = {
+					init: function() {
+						this.pageInit(); //页面初始化
+						this.bindEvent(); //事件绑定
+						this.getData(); //获取数据
+					},
+					pageInit: function() {
+						var _this = this;
+						// 获取窗口对象
+						ws=plus.webview.currentWebview();
+						wo=ws.opener();
+						// 开始扫描
+						ws.addEventListener('show',function(){
+							scan=new plus.barcode.Barcode('bcid',[plus.barcode.QR,plus.barcode.EAN8,plus.barcode.EAN13],{frameColor:'#00FF00',scanbarColor:'#00FF00'});
+						    scan.onmarked = function(type,result,file){
+						    	//console.log(type);
+						    	//console.log(file);
+						    	//console.log(result);
+						    	scan.cancel();
+						    	var _result = _this.parseUrlParam(result);
+						    	_result = _result.active || ''; 
+						    	if(type == 0 && _result.length > 0){
+						    		var homePages = plus.webview.getWebviewById("homopagewebview");
+						    	
+							    	mui.fire(homePages,"scan",{
+				                        elm: _result
+					                });
+					                setTimeout(function(){
+					                	ws.close("none");
+					                },200);					                
+					                
+						    	}else{
+						    		//scan.start({conserve:false});
+						    		var btnArray = ['取消', '重试'];
+						    		mui.confirm("二维码不正确，请重试。", '提示', btnArray, function(e) {
+										if(e.index == 1) {
+											scan.start({conserve:false});
+										} else {
+											setTimeout(function(){
+												mui.back();
+											},100);
+										}
+									});
+						    	}
+						    	
+						    	//_this = this.onmarked()
+						    };
+						    scan.start({conserve:false});
+						});
+					},
+					getData: function() {
+						var _this = this;
+
+					},
+					bindEvent: function() {
+						document.getElementById("btCancel").addEventListener("tap",function(){
+							if(bCancel){
+						    	scan.start({conserve:true,filename:"_doc/barcode/"});
+						    	btCancel&&(btCancel.innerText='暂　停');
+						    }else{
+						    	scan.cancel();
+						    	btCancel&&(btCancel.innerText='开　始');
+						    }
+						    bCancel=!bCancel;
+						});
+					},
+					parseUrlParam : function(url) {
+						if (!url) {
+							url=window.location.href;
+						}
+						var urlParam = {};
+						if (url.indexOf("?") < 0) {
+							return urlParam;
+						}
+						var params = url.substring(url.indexOf("?") + 1).split("&");
+						for (var i = 0; i < params.length; i++) {
+							var k = params[i].substring(0,params[i].indexOf("="));
+							var v = params[i].substring(params[i].indexOf("=")+1);
+							if (v.indexOf("#") > 0) {
+								v = v.substring(0, v.indexOf("#"));
+							}
+							urlParam[k] = v;
+						}
+						return urlParam;
+					}
+				}
+
+				mui.plusReady(function() {
+					var sp = new SCAN();
+					sp.init();
+				});
+			})(mui);
+		</script>
+	</body>
+</html>

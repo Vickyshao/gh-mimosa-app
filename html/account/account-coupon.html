@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>优惠券</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-p-009 **/
+			.app_coupon_list{height: 143px;position: relative;}
+			.coupon_receive_btn{position:absolute;top: 0;bottom: 30px;right: 0;left: 0;margin: auto;width: 80px;height: 80px;text-align: center;line-height: 80px;border-radius: 50%;color: #fff;}
+			.app_coupon_list .app_bottom{position: absolute;bottom: 10px;text-align: center;width: 100%;}
+			
+			.app_user_coupon_box.on .coupon_receive_btn{background: #FF7F1A;}
+			.app_user_coupon_box.used .coupon_receive_btn{background: #666;}
+			.app_user_coupon_box.off .coupon_receive_btn{background: #999;}
+			.tasteCoupon_btn:active{box-shadow: 0px 0px 5px #FF7F1A inset;}
+			.tasteCoupon_btn{position: absolute;top: 5px;right: 5px;padding: 2px 5px;border-radius: 5px;border: 1px solid #ff7f1a;color: #FF7F1A;font-size: 12px;}			
+			.app_user_coupon_box.off .tasteCoupon_btn{display: none;}
+			.app_user_coupon_box.used .tasteCoupon_btn{display: none;}
+		</style>
+	</head>
+
+	<body class="account-coupon">
+		<header class="mui-bar mui-bar-nav app_header app_header0">
+			<span class="mui-action-back mui-icon app_icon mui-icon-back mui-pull-left"></span>
+			<h1 id="app_title" class="mui-title">优惠券</h1>
+		</header>
+		<div class="mui-content app_mui_content0">
+			<div id="slider" class="mui-slider mui-fullscreen" style="top: 64px;">
+				<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted app_bgf app_np">
+					<a class="mui-control-item mui-control-item1 mui-active app_bb0 app_bre" href="#app-canuse">可使用<span id="app-notUsed-num">(0)</span></a>
+					<a class="mui-control-item mui-control-item1 app_bb0 app_bre" href="#app-used">已使用<span id="app-used-num">(0)</span></a>
+					<a class="mui-control-item mui-control-item1 app_bb0 " href="#app-expired">已过期<span id="app-expired-num">(0)</span></a>
+				</div>
+				<div class="mui-slider-group app_sp_top">
+					<div id="app-canuse" class="mui-slider-item mui-control-content mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div id="app-notUsed-list"></div>
+							</div>
+						</div>
+					</div>
+
+					<div id="app-used" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div id="app-used-list"></div> 	
+							</div>
+						</div>
+					</div>
+					<div id="app-expired" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div id="app-expired-list"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/mui.pullToRefresh.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/account/account-coupon.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,2346 @@
+{
+	"@platforms": [
+		"android",
+		"iPhone",
+		"iPad"
+	],
+	"id": "jinzhuapp",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "沪深理财",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.5",/*应用版本名称*/
+		"code": "7"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+
+
+		"Cache": {
+			"description": "管理应用缓存"
+		},
+
+		"Console": {
+			"description": "跟踪调试输出日志"
+		},
+
+		"Device": {},
+		"Downloader": {},
+		"Events": {
+			"description": "应用扩展事件"
+		},
+		"File": {},
+
+
+		"Invocation": {},
+
+
+
+		"Storage": {},
+
+
+		"Runtime": {},
+		"XMLHttpRequest": {},
+
+
+
+
+		"Webview": {},
+		"NativeUI": {},
+		"Navigator": {},
+
+
+		"NativeObj": {},
+
+		"Share": {},
+		"Statistic": {},
+		"Push": {}
+	},
+	"plus": {
+		"popGesture": "close",
+		/*  修改APP的状态栏颜色  */
+		"statusbar": {
+			"style": "dark"
+		},
+		"splashscreen": {
+			"autoclose": false,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": false
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"plugins": {
+				"push": {
+					"igexin": {
+						"appid": "B45elJ17Yb6aa6915BCGV",
+						"appkey": "4eXY4pqYCq8kbwg965GjN4",
+						"appsecret": "F7NYQTTNh09NhiRSHgCRK8"
+					}
+				},
+				"statics": {
+					"umeng": {
+						"appkey_ios": "595b3a562ae85b66a00000be",
+						"channelid_ios": "yxappstore",
+						"appkey_android": "595b397d3eae253b4f001ac9",
+						"channelid_android": "yxandroidstore"
+					}
+				},
+				"share": {
+					"weixin": {
+						"appid": "wxb3ee65235dc5cc76",
+						"appsecret": "86effb6d7553eda18e75ec4245df4497",
+						"description": "可选，微信分享"
+					}
+				}
+			},
+			"apple": {
+				"appid": "jinzhuapp",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"UIReserveStatusbarOffset": true,
+				"frameworks": [],
+				"plistcmds": [
+					"Add :NSCameraUsageDescription string 想访问您的相机"
+				]
+			},
+			"google": {
+				"packagename": "com.yx.jinzhuapp",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"ImmersedStatusbar": true,
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.GET_TASKS\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+					"<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"
+				]
+			},
+			"orientation": [
+				"portrait-primary"
+			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png",
+						"retina8": "unpackage/res/icons/180x180.png",
+						"settings-retina8": "unpackage/res/icons/87x87.png"
+					},
+					"ipad": {
+						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png",
+					"xxxhdpi": "unpackage/res/icons/192x192.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "unpackage/res/splashscreen/320_480.png", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "unpackage/res/splashscreen/640_960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "unpackage/res/splashscreen/640_1136.png",
+						"retina55": "unpackage/res/splashscreen/1242_2208.png",
+						"retina47": "unpackage/res/splashscreen/750_1334.png",
+						"retina55l": "unpackage/res/splashscreen/2208_1242.png"
+					},
+					"ipad": {
+						"portrait": "unpackage/res/splashscreen/768_1004.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "unpackage/res/splashscreen/1536_2008.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "unpackage/res/splashscreen/1024_748.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "unpackage/res/splashscreen/2048_1496.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "unpackage/res/splashscreen/768_1024.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "unpackage/res/splashscreen/1536_2048.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "unpackage/res/splashscreen/1024_768.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "unpackage/res/splashscreen/2048_1536.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/splashscreen/240_282.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "unpackage/res/splashscreen/320_442.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "unpackage/res/splashscreen/480_762.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "unpackage/res/splashscreen/720_1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "unpackage/res/splashscreen/1080_1882.png"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"js/index/index.js",
+					"html/index/index-homepage.html",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/icon_setting.png",
+					"images/icon_my.png",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf",
+					"html/product-tn/product-tn.html",
+					"html/account/account.html",
+					"js/setting/updata.js",
+					"html/index/index-mask.html",
+					"js/component/template-cfg.js",
+					"images/icon_shezhi.png",
+					"images/icon_wode.png",
+					"images/icon_licai.png",
+					"images/icon_shouye_active.png",
+					"images/icon_shouye.png",
+					"images/icon_licai_active.png",
+					"images/icon_wode_active.png"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-centre.html",
+					"html/setting/setting.html",
+					"html/usermgmt/usermgmt-login.html",
+					"html/setting/setting-locker.html",
+					"html/index/start_pages.html",
+					"html/product-t0/product-t0.html",
+					"html/setting/setting-spwd.html",
+					"html/index/index-scan.html",
+					"html/index/index-expgold-mask.html",
+					"html/account/account-message.html",
+					"html/index/index-shortcut/index-signin.html",
+					"html/activity/activities.html"
+				],
+				"priority": 0
+			},
+			"html/index/index-homepage.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"js/index/index-homepage.js",
+					"js/component/GHutils.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"html/index/index-homepage-webview.html",
+					"index.html",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-tn/product-tn.html": {
+				"resources": [
+					"js/product-tn/product-tn.js",
+					"js/component/zepto.min.js",
+					"js/component/GHutils.js",
+					"css/app.css",
+					"html/product-tn/product-tn-list.html",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"images/icon_arrow_down.png",
+					"images/icon_nor.png",
+					"images/icon_arrow_up.png",
+					"index.html",
+					"fonts/mui.ttf",
+					"images/icon_down.png",
+					"images/icon_up.png",
+					"images/icon_filter.png",
+					null,
+					"images/icon_filter_active.png"
+				],
+				"refer": [
+					"html/index/index-homepage.html"
+				],
+				"priority": 0
+			},
+			"html/account/account.html": {
+				"resources": [
+					"js/account/account.js",
+					"js/component/zepto.min.js",
+					"js/component/GHutils.js",
+					"html/account/account-webview.html",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"index.html"
+				],
+				"refer": [
+					"html/index/index-homepage.html"
+				],
+				"priority": 0
+			},
+			"html/index/index-homepage-webview.html": {
+				"resources": [
+					"js/index/index-homepage-webview.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/ih_icon7.png",
+					"images/icon_new.png",
+					"images/ih_new_img.png",
+					"images/ih_icon1.png",
+					"images/ih_icon8.png",
+					"images/ih_move_banner2.png",
+					"images/2.png",
+					"images/ih_icon6.png",
+					"images/icon_news.png",
+					"images/ih_icon5.png",
+					"images/ih_icon4.png",
+					"images/ih_move_banner1.png",
+					"images/ih_icon2.png",
+					"images/ih_icon3.png",
+					"fonts/iconfont.ttf",
+					"images/xin@3x.png",
+					"images/ih_move_banner.png",
+					"images/banner_def.png",
+					"html/index/index-mask.html",
+					"images/icon_hot.png",
+					"images/news_def.png",
+					"images/move_def.png",
+					"images/activity_def.png",
+					"html/index/index-homepage/index-productlist.js",
+					"html/index/index-homepage/index-notice.html",
+					"html/index/index-homepage/index-gridnav.html",
+					"html/index/index-homepage/index-minbanner.html",
+					"html/index/index-homepage/index-productlist.html",
+					"html/index/index-homepage/index-newlist.html",
+					"html/index/index-homepage/index-notice.js",
+					"js/component/require.min.js",
+					"html/index/index-homepage/index-newlist.js",
+					"html/index/index-homepage/index-banner.js",
+					"html/index/index-homepage/index-gridnav.js",
+					"html/index/index-homepage/index-minbanner.js",
+					"html/index/index-homepage/index-banner.html",
+					"js/component/template-cfg.js",
+					"html/index/index-homepage/index-activities.html",
+					"html/index/index-homepage/index-accumulate.js",
+					"html/index/index-homepage/index-accumulate.html",
+					"html/index/index-homepage/index-activities.js",
+					null,
+					"images/safe_yinhang.png",
+					"images/safe_duifu.png",
+					"html/index/index-homepage/index-safe.html",
+					"html/index/index-homepage/index-safe.js",
+					"images/safe_danka.png",
+					"images/safe_shengtai.png",
+					"images/icon_zhinan.png",
+					"images/icon_gongju.png",
+					"images/biaoqian.png",
+					"images/icon_anquan.png",
+					"images/icon_guanyu.png",
+					"images/icon_gonggao.png",
+					"images/icon_qiandao.png",
+					"images/biaoqian_1.png",
+					"images/one.png",
+					"images/three.png",
+					"images/four.png",
+					"images/two.png"
+				],
+				"refer": [
+					"html/index/index-product.html",
+					"html/account/account-invitation.html",
+					"html/account/account-coupon.html",
+					"html/account/account-details.html",
+					"html/product-t0/product-t0-detail.html",
+					"html/index/index-information.html",
+					"html/account/account-deposit.html",
+					"html/account/account-firstdeposit.html",
+					"html/index/index-linkpage.html",
+					"html/index/index-policy-list.html",
+					"html/account/account-product-t0-order.html",
+					"html/account/account-product-t0-holding-detail.html",
+					"html/account/account-product-t0-holding-details.html",
+					"html/account/account-deposit-parent.html",
+					"html/index/index-dynamic-main.html",
+					"html/account/account-orderlist.html",
+					"html/account/account-firstdeposit-parent.html",
+					"html/product-tn/product-tn-detail.html",
+					"html/account/account-product-t0-orderlist.html",
+					"html/account/account-deal-parent.html",
+					"html/usermgmt/usermgmt-centre.html",
+					"html/usermgmt/usermgmt-reg.html",
+					"html/index/content_pages.html",
+					"html/index/index-shortcut/index-tools.html",
+					"html/index/index-shortcut/index-guide.html",
+					"html/index/index-shortcut/index-about.html",
+					"html/product-t0/product-t0-order.html",
+					"html/index/index-shortcut/index-signin-yes.html",
+					"html/index/index-shortcut/index-insurance.html",
+					"html/setting/setting-problems.html",
+					"html/index/index-cmspage.html",
+					"html/index/index-activite.html",
+					"html/index/index-activite2.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-webview.html": {
+				"resources": [
+					"js/account/account-webview.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/mui.ttf",
+					"images/bg_my.png",
+					"fonts/iconfont.ttf",
+					"images/icon_hint.png",
+					"images/banner4.png",
+					null,
+					"images/icon_yaoqing.png",
+					"images/icon_yanzheng.png",
+					"images/icon_wodeyaoqing.png",
+					"images/icon_xiaoxi.png",
+					"images/bg-my.png",
+					"images/icon_youhuijuan.png",
+					"images/icon_jiaoyi.png",
+					"images/icon_yanbi.png",
+					"images/icon_shezhi.png",
+					"images/icon_jilu.png"
+				],
+				"refer": [
+					"html/product-t0/product-t0-detail.html",
+					"html/account/account-product-t0-redeem.html",
+					"html/account/account-product-t0-deal.html",
+					"html/account/account-coupon.html",
+					"html/account/account-invitation.html",
+					"html/account/account-deal.html",
+					"html/setting/setting-problems.html",
+					"html/account/account-details.html",
+					"html/account/account-withdraw.html",
+					"html/account/account-deposit.html",
+					"html/account/account-firstdeposit.html",
+					"html/account/account-orderlist.html",
+					"html/account/account-product-t0-orderlist.html",
+					"html/account/account-deposit-parent.html",
+					"html/account/account-firstdeposit-parent.html",
+					"html/usermgmt/usermgmt-paypswd.html",
+					"html/account/account-deal-parent.html",
+					"html/account/account-expgold.html",
+					"html/usermgmt/usermgmt-centre.html",
+					"html/account/account-deposit-webview-record.html",
+					"html/usermgmt/usermgmt-reg.html",
+					"html/index/index-linkpage.html",
+					"html/account/account-toinvite.html",
+					"html/account/account-income.html",
+					"html/usermgmt/usermgmt-bankcard-add.html",
+					"html/setting/setting.html",
+					"html/account/account-deposit-widthdraw-record.html",
+					"html/account/account-deposit-widthdraw-record-parent.html",
+					"html/account/account-message.html",
+					"html/setting/setting-about-us.html",
+					"html/setting/setting-about-list.html"
+				],
+				"priority": 0
+			},
+			"html/product-tn/product-tn-list.html": {
+				"resources": [
+					"js/product-tn/product-tn-list.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/icon_mark.png",
+					"html/product-tn/product-tn-detail.html",
+					"images/sold_mark_out.png",
+					"images/sold_mark.png",
+					"images/app_nodata2.png",
+					"images/shouqin.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-centre.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-centre.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"html/usermgmt/usermgmt-nickname.html",
+					"fonts/iconfont.ttf",
+					null
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-realname.html",
+					"html/usermgmt/usermgmt-bankcard.html",
+					"html/usermgmt/usermgmt-pwd.html",
+					"html/usermgmt/usermgmt-risk.html",
+					"html/usermgmt/usermgmt-paypswd.html",
+					"html/usermgmt/usermgmt-login.html",
+					"html/account/account-firstdeposit.html",
+					"html/account/account-firstdeposit-parent.html",
+					"html/account/account-zxym.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-nickname.html": {
+				"resources": [
+					"html/usermgmt/usermgmt-centre.html",
+					"js/usermgmt/usermgmt-nickname.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/mui.ttf",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting.html": {
+				"resources": [
+					"js/setting/setting.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [
+					"html/setting/setting-problems.html",
+					"html/setting/setting-feedback.html",
+					"html/setting/setting-about-us.html",
+					"html/setting/setting-spwd.html",
+					"html/usermgmt/usermgmt-bankcard-list.html",
+					"html/setting/setting-accountsafty.html",
+					"html/usermgmt/usermgmt-bankcard-add.html",
+					"html/usermgmt/usermgmt-dealpwd.html"
+				],
+				"priority": 0
+			},
+			"html/product-tn/product-tn-detail.html": {
+				"resources": [
+					"js/product-tn/product-tn-detail.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/bg_my.png",
+					"js/component/GHutils.js",
+					"js/component/digitsToBigRMB.js",
+					"fonts/iconfont.ttf",
+					"images/app-tel.png",
+					"js/component/share.js",
+					"images/icon_satr5.png",
+					"images/icon_satr2.png",
+					"images/icon_satr1.png",
+					"images/icon_satr4.png",
+					"images/icon_satr3.png",
+					"images/measure-2.png",
+					"images/app-shield.png"
+				],
+				"refer": [
+					"html/product-tn/product-tn-order.html",
+					"html/index/index-linkpage.html",
+					"html/usermgmt/usermgmt-bankcard-add.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-login.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-login.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/login_logo.png",
+					"fonts/iconfont.ttf",
+					"images/logo.png",
+					"images/icon_yanbi.png"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-reg.html",
+					"html/usermgmt/usermgmt-forgetpwd.html",
+					"html/usermgmt/usermgmt-centre.html",
+					"html/usermgmt/test.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-realname.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/usermgmt/usermgmt-realname.js",
+					"js/component/idCardValid.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-bankcard.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/usermgmt/usermgmt-bankcard.js",
+					"js/component/GHutils.js",
+					"fonts/mui.ttf",
+					"js/component/banks.js",
+					"images/bankicon_CCB.png",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-pwd.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-pwd.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-risk.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-risk.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/icon_risk_jj.png",
+					"fonts/iconfont.ttf",
+					"images/icon_risk_bs.png",
+					"images/icon_risk_jq.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-paypswd.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/usermgmt/usermgmt-paypswd.js",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-feedback.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/setting/setting-feedback.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-about-us.html": {
+				"resources": [
+					"js/setting/setting.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/zepto.min.js",
+					"fonts/iconfont.ttf",
+					"images/login_logo.png",
+					"js/setting/setting-about-us.js",
+					"images/baofeng-LOGO.png",
+					"images/public_bg.png",
+					"images/about_logo.png",
+					"html/setting/setting-problems.html",
+					"images/wufulogo.png",
+					"images/hushenkonggu.png"
+				],
+				"refer": [
+					"html/index/index-linkpage.html"
+				],
+				"priority": 0
+			},
+			"html/setting/setting-problems.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/setting/setting-problems.js",
+					"fonts/iconfont.ttf",
+					"html/setting/setting-about-us.html",
+					"html/product-t0/product-t0-detail.html"
+				],
+				"refer": [
+					"html/setting/setting-problems-details.html"
+				],
+				"priority": 0
+			},
+			"html/setting/setting-problems-details.html": {
+				"resources": [
+					"js/setting/setting-problems-details.js",
+					"images/question-pic.jpg",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-spwd.html": {
+				"resources": [
+					"js/setting/setting-spwd.js",
+					"js/component/H5locks.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/sha.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-login.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-reg.html": {
+				"resources": [
+					"images/app_icon_title.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/usermgmt/usermgmt-reg.js",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [
+					"html/account/account-invitation.html",
+					"html/index/index-linkpage.html",
+					"html/setting/setting-spwd.html",
+					"html/index/content_pages.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-forgetpwd.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-forgetpwd.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-t0/product-t0-detail.html": {
+				"resources": [
+					"js/component/echarts-all.js",
+					"js/product-t0/product-t0-detail.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/bg_my.png",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf",
+					"js/component/share.js",
+					"images/app-tel.png",
+					"images/icon_satr5.png",
+					"images/icon_satr4.png",
+					"images/icon_satr2.png",
+					"images/icon_satr3.png",
+					"images/bubble.png",
+					"images/icon_satr1.png",
+					"js/component/echarts.simple.min.js",
+					"images/measure-2.png",
+					"images/app-shield.png",
+					"images/product_bg.png",
+					"images/app-nodata2.png",
+					"images/bg_t0.png",
+					"html/setting/setting-problems.html",
+					"html/product-t0/product-t0-introduce.html",
+					"html/index/index-shortcut/index-insurance.html",
+					"html/product-t0/product-t0-protocol.html"
+				],
+				"refer": [
+					"html/product-t0/product-t0-order.html",
+					"html/account/account-firstdeposit-parent.html",
+					"html/index/index-linkpage.html",
+					"html/usermgmt/usermgmt-dealpwd.html",
+					"html/usermgmt/usermgmt-bankcard-add.html",
+					"html/index/content_pages.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-product-t0-redeem.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/account/account-product-t0-redeem.js",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/mui.ttf",
+					"html/account/account-product-t0-redeem.html",
+					"js/component/digitsToBigRMB.js",
+					"fonts/iconfont.ttf",
+					"images/bankicon_CCB.png",
+					"js/component/bank.js"
+				],
+				"refer": [
+					"html/account/account-dealresults.html",
+					"html/usermgmt/usermgmt-forgetpaypswd.html",
+					"html/usermgmt/usermgmt-dealpwd.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-product-t0-deal.html": {
+				"resources": [
+					"js/account/account-product-t0-deal.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/mui.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-product.html": {
+				"resources": [
+					"js/index/index-product.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"html/index/index-product-list.html",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-product-list.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/index/index-product-list.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/app-number-4.png",
+					"images/app-vip-title1.png",
+					"images/app-line-top.png",
+					"images/app-money.png",
+					"images/app-vip-banner.png",
+					"images/app-number-2.png",
+					"images/app-number-5.png",
+					"images/app-line-bottom.png",
+					"images/app-number-6.png",
+					"images/app-arrow-2.png",
+					"images/app-number-1.png",
+					"images/app-right-arrow.png",
+					"images/app-mail.png",
+					"images/app-tel.png",
+					"images/app-arrow-3.png",
+					"images/app-vip-title2.png",
+					"images/app-arrow-1.png",
+					"images/app-vip-title4.png",
+					"images/app-number-3.png",
+					"images/app-vip-title3.png",
+					"images/app-vip-title5.png",
+					"images/flow.png",
+					"images/app-nodata1.png",
+					"fonts/iconfont.ttf",
+					"images/sold_mark_out.png",
+					"images/sold_mark.png",
+					"images/app-nodata2.png"
+				],
+				"refer": [
+					"html/product-tn/product-tn-detail.html",
+					"html/product-t0/product-t0-detail.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-coupon.html": {
+				"resources": [
+					"js/account/account-coupon.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/ticlist_bottom_list.png",
+					"images/icon_stemp_used.png",
+					"images/icon_stemp_expired.png",
+					"js/component/dropload.min.js",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js"
+				],
+				"refer": [
+					"html/account/account-coupon-details.html",
+					"html/account/account-coupon-protocol.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-invitation.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/account/account-invitation.js",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf",
+					"js/component/share.js",
+					"images/app-invite-title.png",
+					"images/bg_invite.png",
+					"images/public_bg.png"
+				],
+				"refer": [
+					"html/account/account-invitation-details.html",
+					"html/account/account-invite-charts.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-deal.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/account/account-deal.js",
+					"js/component/GHutils.js",
+					"images/icon_arrow_down.png",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-details.html": {
+				"resources": [
+					"js/account/account-details.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/echarts.simple.min.js",
+					"js/component/mui.picker.min.js",
+					"css/mui.picker.min.css",
+					"css/gray.css",
+					"js/component/jedate.js",
+					"fonts/iconfont.ttf",
+					"images/app_crl_bg.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-information.html": {
+				"resources": [
+					"images/ih_new_img.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/index/index-information.js",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"fonts/iconfont.ttf",
+					"images/app-nodata1.png"
+				],
+				"refer": [
+					"html/index/content_pages.html",
+					"html/index/index-linkpage.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-deposit.html": {
+				"resources": [
+					"js/account/account-deposit.js",
+					"js/component/zepto.min.js",
+					"images/bankicon_CMB.png",
+					"css/app.css",
+					"js/component/banks.js",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"js/component/digitsToBigRMB.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/bankicon_CCB.png",
+					"images/bankicon_COMM.png",
+					"images/bankicon_ICBC.png",
+					"images/chargelogo2.jpg",
+					"images/chargelogo.jpg",
+					"fonts/iconfont.ttf",
+					"js/component/idCardValid.js",
+					"js/component/bank.js",
+					"images/bankicon_SH.png",
+					"images/logo_sina.png",
+					"html/account/account-deposit.html",
+					"js/component/mui-deposit.js",
+					"js/account/account-withdraw.js"
+				],
+				"refer": [
+					"html/index/index-linkpage.html",
+					"html/account/liCai-Zxym.html",
+					"html/account/account-zxym.html",
+					"html/account/account-zxym-jg.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-firstdeposit.html": {
+				"resources": [
+					"js/account/account-firstdeposit.js",
+					"js/component/banks.js",
+					"js/component/digitsToBigRMB.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/idCardValid.js",
+					"fonts/iconfont.ttf",
+					"images/chargelogo2.jpg",
+					"images/chargelogo.jpg",
+					"images/realname_mark.png",
+					"js/component/bank.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-withdraw.html": {
+				"resources": [
+					"js/account/account-withdraw.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/digitsToBigRMB.js",
+					"js/component/banks.js",
+					"images/bankicon_CCB.png",
+					"fonts/iconfont.ttf",
+					"html/account/account-withdraw.html",
+					"images/bankicon_SH.png",
+					"images/logo_sina.png",
+					"js/component/bank.js"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-forgetpaypswd.html",
+					"html/account/account-zxym.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-forgetpaypswd.html": {
+				"resources": [
+					"js/component/idCardValid.js",
+					"js/usermgmt/usermgmt-forgetpaypswd.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-orderlist.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/account/account-orderlist.js",
+					"fonts/mui.ttf",
+					"js/component/dropload.min.js",
+					"js/component/mui.pullToRefresh.js",
+					"css/mui.css",
+					"js/component/mui.pullToRefresh.material.js",
+					"fonts/iconfont.ttf",
+					"images/bg_my.png",
+					"images/bg-my.png"
+				],
+				"refer": [
+					"html/index/index-policy-list.html",
+					"html/account/account-orderlist-details.html",
+					"html/product-tn/product-tn-detail.html"
+				],
+				"priority": 0
+			},
+			"html/index/index-linkpage.html": {
+				"resources": [
+					"js/index/index-linkpage.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf",
+					"images/icon_satr1.png",
+					"images/icon_img7.png",
+					"images/tn2.png",
+					"images/icon_img8.png",
+					"images/icon_img2.png",
+					"images/icon_img1.png",
+					"images/icon_img6.png",
+					"images/icon_satr4.png",
+					"images/icon_satr5.png",
+					"images/safe_top_logo.png",
+					"images/icon_satr3.png",
+					"images/1-logo.png",
+					"images/icon_satr2.png",
+					"images/icon_img3.png",
+					"images/icon_img5.png",
+					"images/icon_img4.png",
+					"images/logo.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-policy-list.html": {
+				"resources": [
+					"images/tianan_pretext.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/index/index-policy-list.js",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/tianan_insurance_logo.png",
+					"js/component/GHutils.js",
+					"js/component/dropload.min.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-product-t0-order.html": {
+				"resources": [
+					"images/ih_icon7.png",
+					"js/component/echarts-all.js",
+					"images/ih_icon6.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"images/ih_icon8.png",
+					"css/mui.min.css",
+					"images/bg_my.png",
+					"js/account/account-product-t0-order.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-product-t0-holding-detail.html": {
+				"resources": [
+					"images/ih_icon7.png",
+					"js/component/echarts-all.js",
+					"images/ih_icon6.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"js/account/account-product-t0-holding-detail.js",
+					"images/ih_icon8.png",
+					"css/mui.min.css",
+					"images/bg_my.png",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-product-t0-holding-details.html": {
+				"resources": [
+					"js/component/echarts-all.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"images/bg_my.png",
+					"js/component/GHutils.js",
+					"js/account/account-product-t0-holding-details.js",
+					"fonts/mui.ttf",
+					"images/ih_icon4.png",
+					"js/component/t0_chart.js",
+					"js/component/echarts.min.js",
+					"js/component/echarts.simple.min.js",
+					"fonts/iconfont.ttf",
+					"js/component/share.js",
+					"images/bubble.png",
+					"images/bg_t0.png"
+				],
+				"refer": [
+					"html/account/account-product-t0-redeem.html",
+					"html/product-t0/product-t0-order.html",
+					"html/account/account-product-t0-deal.html",
+					"html/account/account-product-t0-reward.html"
+				],
+				"priority": 0
+			},
+			"html/product-t0/product-t0-order.html": {
+				"resources": [
+					"js/product-t0/product-t0-order.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/component/digitsToBigRMB.js",
+					"fonts/iconfont.ttf",
+					"images/redbeg.png",
+					"images/bankicon_ICBC.png",
+					"js/component/bank.js",
+					"images/bankicon_ABC.png",
+					"images/bankicon_CCB.png"
+				],
+				"refer": [
+					"html/account/account-dealresults.html",
+					"html/usermgmt/usermgmt-dealpwd.html",
+					"html/account/account-deposit.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-product-t0-orderlist.html": {
+				"resources": [
+					"js/account/account-product-t0-orderlist.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf",
+					"images/bg_my.png",
+					"images/bg-my.png"
+				],
+				"refer": [
+					"html/account/account-product-t0-holding-details.html",
+					"html/account/account-product-t0-frozendetails.html",
+					"html/product-t0/product-t0-detail.html",
+					"html/account/account-product-t0-redeem.html",
+					"html/account/account-product-t0-redeem-record.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-deposit-parent.html": {
+				"resources": [
+					"html/account/account-deposit.html",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/account/account-deposit-parent.js",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-orderlist-details.html": {
+				"resources": [
+					"js/account/account-orderlist-details.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-dealresults.html": {
+				"resources": [
+					"js/account/account-dealresults.js",
+					"fonts/iconfont.ttf",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-tn/product-tn-order.html": {
+				"resources": [
+					"js/product-tn/product-tn-order.js",
+					"fonts/mui.ttf",
+					"images/redbeg.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/component/digitsToBigRMB.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"images/bankicon_ICBC.png",
+					"js/component/bank.js",
+					"images/bankicon_ABC.png",
+					"images/bankicon_CCB.png"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-forgetpaypswd.html",
+					"html/account/account-dealresults.html",
+					"html/account/account-zxym.html",
+					"html/usermgmt/usermgmt-dealpwd.html",
+					"html/product-tn/product-tn-coupon.html",
+					"html/account/account-deposit.html"
+				],
+				"priority": 0
+			},
+			"html/index/index-dynamic.html": {
+				"resources": [
+					"js/index/index-dynamic.js",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"fonts/mui.ttf",
+					"images/icon_hot.png",
+					"images/icon_new.png"
+				],
+				"refer": [
+					"html/index/index-linkpage.html",
+					"html/index/content_pages.html"
+				],
+				"priority": 0
+			},
+			"html/index/index-dynamic-main.html": {
+				"resources": [
+					"js/index/index-dynamic-main.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"html/index/index-dynamic.html",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-locker.html": {
+				"resources": [
+					"js/component/sha.js",
+					"js/setting/setting-locker.js",
+					"js/component/H5locks.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-firstdeposit-parent.html": {
+				"resources": [
+					"html/account/account-firstdeposit.html",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/account/account-firstdeposit-parent.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/start_pages.html": {
+				"resources": [
+					"images/app_btn_enter.png",
+					"images/sp_arrow.png",
+					"images/start_pages2.png",
+					"images/start_pages3.png",
+					"images/start_pages1.png",
+					"images/start_pages4.png",
+					"js/component/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-mask.html": {
+				"resources": [
+					"js/setting/setting.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/setting/updata.js",
+					"js/index/index-mask.js",
+					"images/dot.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-product-t0-frozendetails.html": {
+				"resources": [
+					"js/account/account-product-t0-frozendetails.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-coupon-details.html": {
+				"resources": [
+					"js/account/account-coupon-details.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-coupon-protocol.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-invitation-details.html": {
+				"resources": [
+					"js/account/account-invitation-details.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-deal-parent.html": {
+				"resources": [
+					"images/icon_arrow_down.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/account/account-deal-parent.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"html/account/account-deal.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-expgold.html": {
+				"resources": [
+					"js/account/account-expgold.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/app_nodata2.png",
+					"js/component/GHutils.js",
+					"images/goldhover.png",
+					"images/goldblur.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-t0/product-t0.html": {
+				"resources": [
+					"images/icon_arrow_down.png",
+					"images/icon_nor.png",
+					"js/product-tn/product-tn.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"js/product-t0/product-t0.js",
+					"html/product-t0/product-t0-list.html",
+					"html/product-t0/product-t0-detail.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-t0/product-t0-list.html": {
+				"resources": [
+					"images/app_nodata2.png",
+					"js/product-t0/product-t0-list.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					null,
+					"js/component/echarts.simple.min.js",
+					"images/product_bg.png",
+					"images/kuang.png",
+					"images/app-nodata2.png"
+				],
+				"refer": [
+					"html/product-t0/product-t0-detail.html"
+				],
+				"priority": 0
+			},
+			"html/account/liCai-Zxym.html": {
+				"resources": [
+					"js/account/liCai-Zxym.js",
+					"html/account/liCai-Zxym-Webview.html",
+					"js/component/zepto.min.js",
+					"js/component/mui.min.js",
+					"js/component/GHutils.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/liCai-Zxym-Webview.html": {
+				"resources": [
+					"js/account/liCai-Zxym-Webview.js",
+					"images/app_nodata.png",
+					"js/component/zepto.min.js",
+					"js/component/mui.min.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/content_pages.html": {
+				"resources": [
+					"js/index/content_pages.js",
+					"images/content_bg.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-zxym.html": {
+				"resources": [
+					"js/account/account-zxym.js",
+					"html/account/account-zxym-webview.html",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [
+					"html/account/account-zxym-jg.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-zxym-webview.html": {
+				"resources": [
+					"images/app_nodata.png",
+					"js/account/account-zxym-webview.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-zxym-jg.html": {
+				"resources": [
+					"js/account/account-zxym-jg.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-scan.html": {
+				"resources": [
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-deposit-webview-record.html": {
+				"resources": [
+					"js/account/account-deposit-webview-record.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js",
+					"js/component/mui.pullToRefresh.material.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-product-t0-reward.html": {
+				"resources": [
+					"js/account/account-product-t0-reward.js",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/mui.pullToRefresh.material.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-expgold-mask.html": {
+				"resources": [
+					"images/expgold_box_close.png",
+					"images/expgold.png",
+					"js/index/index-expgold-mask.js"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-reg.html"
+				],
+				"priority": 0
+			},
+			"html/setting/setting-accountsafty-spwdtouchid.html": {
+				"resources": [
+					"js/setting/setting-accountsafty-spwdtouchid.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [
+					"html/setting/setting-spwd.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-bankcard-list.html": {
+				"resources": [
+					"images/app-cross.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/usermgmt/usermgmt-bankcard-list.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"js/component/bank.js",
+					"images/bankicon_ICBC.png",
+					"images/bankicon_ABC.png",
+					"images/bankicon_BOC.png",
+					"images/bankicon_CCB.png",
+					"images/bankicon_SZPAB.png"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-bankcard-add.html",
+					"html/usermgmt/usermgmt-bankcard-edit.html",
+					"html/setting/setting-accountsafty.html",
+					"html/usermgmt/usermgmt-dealpwd.html"
+				],
+				"priority": 0
+			},
+			"html/setting/setting-accountsafty.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/setting/setting-accountsafty.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [
+					"html/setting/setting-accountsafty-spwdtouchid.html",
+					"html/usermgmt/usermgmt-dealpwd.html",
+					"html/usermgmt/usermgmt-pwd.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-bankcard-add.html": {
+				"resources": [
+					"js/component/idCardValid.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/usermgmt/usermgmt-bankcard-add.js",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"js/component/bank.js"
+				],
+				"refer": [
+					"html/index/content_pages.html"
+				],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-dealpwd.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-dealpwd.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [
+					"html/account/account-zxym-jg.html",
+					"html/usermgmt/usermgmt-bankcard-add.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-message.html": {
+				"resources": [
+					"js/account/account-message.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"css/mui.css",
+					"js/component/GHutils.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"images/icon_filter.png",
+					"images/icon_filter_active.png"
+				],
+				"refer": [
+					"html/index/index-linkpage.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-toinvite.html": {
+				"resources": [
+					"js/account/account-toinvite.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/component/share.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/invite-img.png",
+					"js/component/GHutils.js",
+					"images/app-nodata1.png"
+				],
+				"refer": [
+					"html/account/account-invitation.html"
+				],
+				"priority": 0
+			},
+			"html/account/account-invite-charts.html": {
+				"resources": [
+					"images/invitebanner.png",
+					"js/account/account-invite-charts.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/component/share.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-tools.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js",
+					"html/index/index-shortcut/index-tools.js"
+				],
+				"refer": [
+					"html/index/index-shortcut/index-tools-details.html"
+				],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-tools-details.html": {
+				"resources": [
+					"html/index/index-shortcut/index-tools-details.js",
+					"js/component/iscroll.js",
+					"images/measure-2.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-t0/product-t0-protocol.html": {
+				"resources": [
+					"images/icon_satr5.png",
+					"js/product-t0/product-t0-protocol.js",
+					"js/component/mui.pullToRefresh.js",
+					"css/mui.css",
+					"js/component/mui.pullToRefresh.material.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"html/product-t0/product-t0-detail.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-income.html": {
+				"resources": [
+					"js/component/echarts.simple.min.js",
+					"js/component/mui.picker.min.js",
+					"fonts/mui.ttf",
+					"js/account/account-income.js",
+					"js/component/GHutils.js",
+					"js/component/jedate.js",
+					"css/app.css",
+					"js/component/zepto.min.js",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/bg_my.png",
+					"css/mui.picker.min.css",
+					"css/gray.css",
+					"images/bg-my.png",
+					"images/public_bg.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-guide.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"html/index/index-shortcut/index-guide.js",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js",
+					"images/step-4.png",
+					"images/step-5.png",
+					"images/xinshouhongbao.png",
+					"js/component/swiper-3.3.1.min.js",
+					"images/step-1.png",
+					"images/xinshoutu.png",
+					"images/step-2.png",
+					"images/step-3.png",
+					"css/swiper.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-about.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"html/index/index-shortcut/index-about.js",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/usermgmt-bankcard-edit.html": {
+				"resources": [
+					"js/usermgmt/usermgmt-bankcard-edit.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-tn/product-tn-coupon.html": {
+				"resources": [
+					"js/product-tn/product-tn-coupon.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-signin.html": {
+				"resources": [
+					"images/icon_guan@2x.png",
+					"html/index/index-shortcut/index-signin.js",
+					"images/hongbaotankuang_1@2x.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-deposit-widthdraw-record.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/account/account-deposit-widthdraw-record.js",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js",
+					"js/component/mui.pullToRefresh.material.js",
+					"js/account/account-deal.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-deposit-widthdraw-record-parent.html": {
+				"resources": [
+					"images/icon_arrow_down.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"js/account/account-deal-parent.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"html/account/account-deal.html",
+					"js/account/account-deposit-widthdraw-record-parent.js",
+					"html/account/account-deposit-widthdraw-record.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-signin-yes.html": {
+				"resources": [
+					"images/hongbaotankuang_2@2x.png",
+					"html/index/index-shortcut/index-signin-yes.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-shortcut/index-insurance.html": {
+				"resources": [
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"html/product-t0/product-t0-detail.html",
+					"images/two.png",
+					"images/one.png",
+					"images/three.png",
+					"images/four.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/activity/activities-webview.html": {
+				"resources": [
+					"js/activity/activities-webview.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js"
+				],
+				"refer": [
+					"html/index/index-linkpage.html",
+					"html/index/index-activite2.html"
+				],
+				"priority": 0
+			},
+			"html/activity/activities.html": {
+				"resources": [
+					"html/activity/activities-webview.html",
+					"js/activity/activities.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/zepto.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/account/account-product-t0-redeem-record.html": {
+				"resources": [
+					"js/account/account-product-t0-redeem-record.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/component/mui.pullToRefresh.js",
+					"js/component/GHutils.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/product-t0/product-t0-introduce.html": {
+				"resources": [
+					"css/mui.css",
+					"css/app.css",
+					"fonts/iconfont.ttf",
+					"images/introduce_icon1.png",
+					"images/introduce_icon3.png",
+					"images/introduce_icon2.png",
+					"images/introduce_icon4.png",
+					"js/component/zepto.min.js",
+					"js/component/mui.min.js",
+					"html/product-t0/product-t0-detail.html",
+					"js/product-t0/product-t0-introduce.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/usermgmt/test.html": {
+				"resources": [
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-about-list.html": {
+				"resources": [
+					"images/about_banner.png",
+					"css/about.css",
+					"js/setting/setting-about-us.js"
+				],
+				"refer": [
+					"html/setting/setting-about-us.html",
+					"html/setting/setting-about-vertical.html",
+					"html/setting/setting-about-partner.html",
+					"html/setting/setting-about-org.html"
+				],
+				"priority": 0
+			},
+			"html/setting/setting-about-org.html": {
+				"resources": [
+					"images/logo03.png",
+					"images/arrow.png",
+					"images/logo04.png",
+					"images/logo02.png",
+					"images/logo01.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-about-partner.html": {
+				"resources": [
+					"images/group7.png",
+					"images/group10.png",
+					"images/group2.png",
+					"images/group6.png",
+					"images/group1.png",
+					"images/group8.png",
+					"images/group9.png",
+					"images/group3.png",
+					"images/group5.png",
+					"images/group4.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/setting/setting-about-vertical.html": {
+				"resources": [
+					"images/mobile_page1.png",
+					"images/mobile_page2.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-cmspage.html": {
+				"resources": [
+					"js/index/index-cmspage.js",
+					"images/app-invitereg.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-activite.html": {
+				"resources": [
+					"images/index-activity.png",
+					"js/index/index-cmspage.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/component/GHutils.js",
+					"images/txt.png",
+					"images/index_activity/register.png",
+					"images/index_activity/banner1.png",
+					"images/index_activity/banner2.png",
+					"images/index_activity/invite_success.png",
+					"images/index_activity/invite.png",
+					"fonts/iconfont.ttf",
+					"images/index_activity/111_03.png",
+					"images/index_activity/111_04.png",
+					"images/index_activity/111_09.png",
+					"images/index_activity/111_05.png",
+					"images/index_activity/111_02.png",
+					"images/index_activity/111_08.png",
+					"images/index_activity/111_06.png",
+					"images/index_activity/111_07.png",
+					"images/index_activity/111_01.png",
+					"images/index_activity/111_10.png",
+					"images/index_activity/111_11.png",
+					"images/index_activity/111_12.png",
+					"images/index_activity/111_0402.png"
+				],
+				"refer": [
+					"html/usermgmt/usermgmt-reg.html",
+					"html/usermgmt/usermgmt-login.html",
+					"html/product-t0/product-t0-coupon.html",
+					"html/account/account.html",
+					"html/account/account-webview.html",
+					"html/account/account-toinvite.html",
+					"html/account/account-coupon.html",
+					"html/index/activity-detail.html"
+				],
+				"priority": 0
+			},
+			"html/product-t0/product-t0-coupon.html": {
+				"resources": [
+					"js/product-t0/product-t0-coupon.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/activity-detail.html": {
+				"resources": [
+					"images/index_activity/bg.png",
+					"images/index_activity/detail-banner.png",
+					"js/component/swiper-3.3.1.min.js",
+					"css/swiper.min.css",
+					"images/index_activity/title1.png",
+					"images/index_activity/title3.png",
+					"images/index_activity/title2.png",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"js/index/index-cmspage.js",
+					"fonts/iconfont.ttf",
+					"js/component/GHutils.js",
+					"js/component/swiper.min.js",
+					"js/account/account-deposit-widthdraw-record.js",
+					"images/index_activity/login-step1.png",
+					"images/index_activity/login-step3.png",
+					"images/index_activity/login-step2.png",
+					"images/index_activity/login-step4.png",
+					"images/index_activity/login-step5.png",
+					"images/about-banner.png",
+					"images/prev.png",
+					"images/next.png",
+					"images/index_activity/invite-step1.png",
+					"images/index_activity/invite-step2.png",
+					"images/index_activity/invite-step3.png",
+					"images/index_activity/last-step3.png",
+					"images/index_activity/last-step1.png",
+					"images/index_activity/last-step2.png",
+					"images/index_activity/invite-step4.png",
+					"images/index_activity/footer.png"
+				],
+				"refer": [
+					"html/index/activity-detail2.html"
+				],
+				"priority": 0
+			},
+			"html/index/activity-detail2.html": {
+				"resources": [
+					"images/index_activity/title2.png",
+					"images/index_activity/title3.png",
+					"images/index_activity/bg.png",
+					"images/index_activity/login-step3.png",
+					"images/index_activity/detail-banner.png",
+					"images/index_activity/invite-step1.png",
+					"images/index_activity/login-step4.png",
+					"images/index_activity/login-step5.png",
+					"images/index_activity/invite-step4.png",
+					"images/index_activity/invite-step2.png",
+					"images/index_activity/invite-step3.png",
+					"images/index_activity/login-step2.png",
+					"js/component/swiper.min.js",
+					"css/swiper.min.css",
+					"images/index_activity/title1.png",
+					"images/index_activity/login-step1.png",
+					"images/index_activity/footer.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/index-activite2.html": {
+				"resources": [
+					"images/index_activity/111_03.png",
+					"images/index_activity/111_11.png",
+					"images/index_activity/2_02.png",
+					"images/index_activity/2_09.png",
+					"js/index/index-cmspage.js",
+					"images/index_activity/111_04.png",
+					"images/index_activity/111_0402.png",
+					"images/index_activity/111_09.png",
+					"images/index_activity/111_05.png",
+					"images/index_activity/2_06.png",
+					"images/index_activity/2_01.png",
+					"images/index_activity/2_07.png",
+					"images/index_activity/111_10.png",
+					"js/component/GHutils.js",
+					"js/component/zepto.min.js",
+					"css/app.css",
+					"js/component/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/index_activity/2_08.png",
+					"images/index_activity/2_05.png"
+				],
+				"refer": [
+					"html/index/activity-detail2.html",
+					"html/usermgmt/usermgmt-reg.html",
+					"html/usermgmt/usermgmt-login.html",
+					"html/account/account-coupon.html",
+					"html/account/account-toinvite.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"js/component/Chart.js",
+				"js/component/wx_custom.js",
+				"js/index/index-policy-detail.js",
+				"js/usermgmt/usermgmt-spwd.js",
+				"html/index/index-policy-detail.html",
+				"html/setting/setting-mask.html",
+				"js/component/mui.js",
+				"html/usermgmt/usermgmt-spwd.html",
+				"html/account/accout.html"
+			]
+		}
+	}
+}

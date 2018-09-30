@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>手势密码</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			/** app.css ==> app-001 **/
+		</style>
+		<style type="text/css">
+			html,body,.mui-content{height: 100%;background:#fff;}
+			.mui-content{background:#fff;background-size:cover;}
+			.app_body_con{opacity: 1;transition:opacity .1s;}
+			.app_body_con.app_body_hide{opacity: 0;}
+			.app_lock_tips{margin-top: 15px;}
+			.app_lock_title{font-size:36px;line-height: 36px;
+				background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#00a1f8), to(#0185fa));
+			    -webkit-background-clip: text;
+			    -webkit-text-fill-color: transparent;
+			    text-align:center;
+			    margin-top: 30px;}
+		</style>
+	</head>
+
+	<body class="app_body_con app_body_hide">
+		<!--<header class="mui-bar mui-bar-nav app_header app_header0">
+			<span class="mui-action-back mui-icon mui-icon-back mui-pull-left"></span>
+			<h1 class="mui-title"><span id="app_title"></span>手势锁屏</h1>
+		</header>-->
+		<div class="mui-content app_mui_content0">
+			<div class="app_lock_title">欢迎回来</div>
+			<div class="app_lock_tips mui-text-center" id="app_txt_locktips">请绘制手势密码进行解锁</div>
+			<div class="app_lock_box" id="lockCanvas"></div>
+
+			<div class="app_step_num app_clearfix app_p20 mui-text-center">
+				<a class="app_cmain" id="app_forget">忘记手势密码</a>
+                <a class="app_cred3 app_mr20 app_none" style="float: right;" id="app_touchid">指纹解锁</a>
+            </div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/H5locks.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/component/sha.js"></script>
+		<script src="../../js/setting/setting-locker.js"></script>
+	</body>
+
+</html>

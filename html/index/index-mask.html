@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>遮罩</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		html,body,.mui-content{background: transparent;}
+    	</style>
+	</head>
+	<body>
+			<div class="app_dialog app_active app_show">
+			 <div class="update_box">
+		      <div class="uptitle" >版本更新</div>
+		      <div class="upbox_word" id="app_version_info">
+		       <p id="app_version_verisonNo"></p>
+		       <div id="app_version_desc">
+		       
+		       </div>
+		      </div>
+		      <div class="upbtn">
+		       <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="app_updateVersion_now">立即更新</button>
+		    <!--   <button type="button" class="mui-btn mui-btn-block mui_wh_btn">不再提醒</button>-->
+		       <button type="button" class="mui-btn mui-btn-block mui_wh_btn" id="app-updateVersion_next">下次再说</button>
+		      </div>
+		     </div>
+			</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/index/index-mask.js"></script>
+		<script src="../../js/setting/updata.js"></script>
+	</body>
+</html>

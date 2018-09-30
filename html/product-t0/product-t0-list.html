@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活期产品详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.chart {
+				height: 80px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+		.app_c8{color: #888888;}
+    		.app_c2{color: #222222;}
+    		.app_c9{color:#999}
+    		.app_cf4{color:#F4551F;}
+    		.app_tag_icon{position: absolute;}
+    		.product_box{min-height:450px;background: #f65205;padding: 57px 20px 20px 20px;text-align: center;color: #fff;}
+	   		.product_box .app_title{font-size: 18px;}
+	   		.product_box .app_fpink{color: #ffc2a5;}
+	   		.app_center{margin:60px auto;}
+	   		.red_bg{background: linear-gradient( #ff712e 0%, #ff712e 99%);position: relative;}
+	   		.bubble{position: absolute;top: -18px;right: -2px;width: 45px;height: 18px;font-size: 12px;color: #f65205;line-height: 16px;background: url(../../images/kuang.png);background-size: 100%;background-repeat: no-repeat;}
+	   		button.mui-btn.onebtn.app_btn_left{width: 50%;float: left;border-radius: 0;color: #f65205;}
+	   		button.mui-btn.onebtn.app_btn_right{width: 50%;float: right;border-radius: 0;background: #f65205;}
+	   		.app_f73{font-size: 73px;}
+	   		.app_f60{font-size: 60px;}
+	   		.app_f26{font-size: 26px;}
+	   		.app_mt60{margin-top: 60px;}
+	   		
+	   		.app_product_ihbox{margin: 5px 0;border-radius: 0;border: 1px solid #e5e5e5;background: #fff;padding: 0 12px;position: relative;}
+			
+			.app_product_ihbox_title{border-bottom: none;padding-bottom: 0;}
+    		.app_product_ihcon{border-bottom: 1px solid #EFECE8;}
+    		.app_product_icon{background: #ff8c4c;width: 60px;height: 22px;color: #fff;position: absolute;right: 10px;top: 0;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;font-size: 12px;text-align: center;line-height: 22px;}
+    		.sold_out .app_product_icon{background: #d1d1d1;}
+    	</style>
+	</head>
+	<body>
+		
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper" id="app_pullRefresh">
+				<div class="mui-scroll">
+					<div class="app_product_list">
+						<!--<div class="app_product_ihbox app_showdetail">
+							<div class="app_product_icon">新手专享</div>
+							<div class="app_product_ihbox_title app_c4">活薪宝
+							</div>
+							<div class="app_product_ihcon app_clearfix">
+								<div class="app_product_ihview app_fl app_pt5 mui-col-xs-5">
+									<div class="app_cmain ">
+										<span class="app_f20">5.00%-7.00%</span>
+									</div>
+									<p class="app_f14 app_cb3a app_mt8 app_c8">随时取现</p>
+								</div>
+								<div class="app_product_ihview app_fl mui-col-xs-7 app_pt5 app_pb10 app_f14 app_c4 text-align-right">
+									<span class="app_c8">每万元收益：</span>1.18-1.67元
+									<div class="app_mt10">
+										<span class="app_c8">投资人次：</span>
+										1
+									</div>
+								</div>
+							</div>
+							<div class="app_clearfix app_pt10">
+								<div class="app_pt15 app_pb25 app_w70p app_fl">
+									
+								</div>
+								<div>
+									<div class="mui-btn mui-btn-primary app_fr">立即投资</div>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					<div id="app_list_tips" class="app_tc app_mt50 app_pt50 app_pb20 text-align-center app_none">
+						<div class="app_tc app_nodata_tips"><img src="../../images/app_nodata2.png" alt="" /></div>
+						<div class="app_mt20 app_cgray app_f20">&nbsp;没有筛选结果!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--<div class="mui-content app_mt10">
+			<div class="mui-scroll-wrapper" id="app_pullRefresh">
+				<div class="mui-scroll app_none">
+					<div class="product_box">
+						<div id="app_title" class="app_title"></div>
+						<div class="app_mt40 app_f24"><span id="app_sevDayYrt" class="app_f60"></span>%</div>
+						<div class="app_mt15 app_fpink">昨日年化收益率</div>
+						<div class="mui-col-xs-6 app_mt60 app_mb60 app_fl text-align-center">
+							<div id="app_purchasingAmount" class="app_f26"></div>
+							<div class="app_fpink app_mt10">起投金额(元)</div>
+						</div>
+						<div class="mui-col-xs-6 app_fl app_mt60 app_mb60 text-align-center">
+							<div class="app_f26" id="app_tenThsPerDayProfit"></div>
+							<div class="app_fpink app_mt10">每万元收益(元)</div>
+						</div>
+						<div style="clear: both;"></div>
+						<div id="chartdiv" class="">
+							<div id="app_sevenDaysRId" class="mui-control-content mui-active red_bg">
+								<div class="bubble"><span id="profit">0</span>%</div>
+								<div class="chart" id="app_sevenDaysRIdChart"></div>
+							</div>
+						</div>
+					</div>
+					<nav class="app-bar-tab app_mt10 app_nav_bottom app_iconbg3" id="app_index_bottom_nav" style="background: #fff;">
+						<button id="app_redeem" type="button" class="mui-btn mui-btn-block onebtn app_btn_left app_f16" style="">赎回</button>
+						<button id="app_invest" type="button" class="mui-btn mui-btn-block onebtn app_btn_right app_cf app_f16" style="">&nbsp;</button>
+					</nav>
+				</div>
+				<div id="app_list_tips" class="app_mt60 text-align-center app_w30p app_center app_ca6 app_none"><img style="width:100%" src="../../images/app-nodata2.png"/>暂无产品</div>
+			</div>
+		</div>-->
+		<script src="../../js/component/mui.min.js"></script>
+		<script src="../../js/component/zepto.min.js"></script>
+		<script src="../../js/component/GHutils.js"></script>
+		<script src="../../js/product-t0/product-t0-list.js"></script>
+	</body>
+</html>

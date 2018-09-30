@@ -1,0 +1,98 @@
+{
+  "html/account/account.html": {
+    "resources": [
+      "js/account/account.js",
+      "html/account/account-webview.html"
+    ],
+    "refer": [
+      "html/account/account-webview.html"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "js/index/index.js",
+      "js/setting/updata.js",
+      "js/component/template-cfg.js",
+      "html/index/index-homepage.html",
+      "css/app.css",
+      "js/component/mui.min.js",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "js/component/GHutils.js"
+    ],
+    "refer": [
+      "html/account/account.html",
+      "html/index/index-homepage.html",
+      "html/usermgmt/usermgmt-login.html",
+      "html/activity/activities.html"
+    ]
+  },
+  "html/index/index-homepage.html": {
+    "resources": [
+      "js/component/zepto.min.js",
+      "js/index/index-homepage.js",
+      "html/index/index-homepage-webview.html"
+    ],
+    "refer": [
+      "html/index/index-homepage-webview.html"
+    ]
+  },
+  "html/activity/activities-webview.html": {
+    "resources": [
+      "js/activity/activities-webview.js"
+    ]
+  },
+  "html/usermgmt/usermgmt-login.html": {
+    "resources": [
+      "js/usermgmt/usermgmt-login.js",
+      "images/login_logo.png"
+    ]
+  },
+  "html/index/index-homepage-webview.html": {
+    "resources": [
+      "images/banner_def.png",
+      "html/index/index-homepage/index-productlist.js",
+      "html/index/index-homepage/index-notice.html",
+      "html/index/index-homepage/index-minbanner.html",
+      "html/index/index-homepage/index-productlist.html",
+      "js/index/index-homepage-webview.js",
+      "html/index/index-homepage/index-activities.html",
+      "images/one.png",
+      "images/three.png",
+      "images/icon_hot.png",
+      "images/four.png",
+      "html/index/index-homepage/index-safe.html",
+      "html/index/index-homepage/index-newlist.html",
+      "html/index/index-homepage/index-notice.js",
+      "js/component/require.min.js",
+      "images/two.png",
+      "html/index/index-homepage/index-accumulate.js",
+      "html/index/index-homepage/index-newlist.js",
+      "html/index/index-homepage/index-banner.js",
+      "html/index/index-homepage/index-minbanner.js",
+      "html/index/index-homepage/index-accumulate.html",
+      "html/index/index-homepage/index-activities.js",
+      "html/index/index-homepage/index-banner.html",
+      "html/index/index-homepage/index-safe.js"
+    ],
+    "refer": [
+      "html/index/index-shortcut/index-insurance.html"
+    ]
+  },
+  "html/account/account-webview.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "images/bg-my.png",
+      "js/account/account-webview.js"
+    ]
+  },
+  "html/activity/activities.html": {
+    "resources": [
+      "html/activity/activities-webview.html",
+      "js/activity/activities.js"
+    ],
+    "refer": [
+      "html/activity/activities-webview.html"
+    ]
+  }
+}

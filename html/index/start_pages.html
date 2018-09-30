@@ -1,0 +1,124 @@
+<!--http://192.168.1.30:8000/gh-mimosa-app/images/start_pages2.pnghttp://192.168.1.30:8000/gh-mimosa-app/images/start_pages2.png-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>欢迎</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.mui-slider-item img{display: block;}
+    		html,body,.mui-content,.mui-slider{height: 100%;overflow: hidden;background: #FBFBFB;}
+    		.mui-content{transition: opacity .3s;opacity: 1;}
+    		.mui-slider .mui-slider-group{height: 100%;}
+    		.mui-slider-indicator{bottom:40px;}
+    		.mui-slider-indicator .mui-indicator{width:7px;height:7px;border:none;box-shadow: none;background:rgba(50,50,50,.2);margin: 0 4px;}
+    		.mui-slider-indicator .mui-active.mui-indicator{background: #5B83B5;}
+    		.mui-slider .mui-slider-group .mui-slider-item>img {width: 100%;display: block;margin: 0 auto;}
+    		.app_btn_enter{width: 137px;height: 43px;line-height: 43px;text-align: center;font-size: 18px;color:#41AFFA;position: absolute;left: 50%;margin-left: -68px;bottom:10px;}
+    		@media only screen and (max-width: 320px)  {
+    			.mui-slider .mui-slider-group .mui-slider-item>img {widthttp://192.168.1.30:8000/gh-mimosa-app/images/start_pages2.pngh: 80%;}
+    		}
+    		@media only screen and (max-width: 320px) and (min-height: 568px)  {
+    			.mui-slider .mui-slider-group .mui-slider-item>img {width: 100%;}
+    		}
+    		@media only screen and (min-width: 412px) and (max-height: 733px)  {
+    			.mui-slider .mui-slider-group .mui-slider-item>img {width: 90%;}
+    		}
+    		@media only screen and (min-width: 740px)  {
+    			.mui-slider .mui-slider-group .mui-slider-item>img {width: 80%;}
+    		}
+    		@media only screen and (min-width: 960px)  {
+    			.mui-slider .mui-slider-group .mui-slider-item>img {width: 70%;}
+    		}
+    		.app_sp_arrow{position: relative;top:5px;width:14px}
+    		
+    		/*.app_btn_enter img{display: block;width: 100%;}*/
+    		.tips{position: absolute;top: 40px;right: 20px;color: #5b83b5;font-size: 15px;}
+    		.tips span{display: inline-block;width: 7px;height: 12px;margin-left:2px;background-size: 100%;padding-top: 2px;}
+    		.mui-slider .mui-slider-group .mui-slider-item .tips span img{width: 80%;}
+    	</style>
+	</head>
+	<body>
+		<div class="mui-content" id="app_content">
+			<div class="mui-slider" id="mui-slider">
+			  <div class="mui-slider-group">
+			    <div class="mui-slider-item">
+			    	<img src="../../images/start_pages1.png" />
+			    	<div class="tips enter">跳过<span><img src="../../images/app_arrow_4.png" /></span></div>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<img src="../../images/start_pages2.png" />
+			    	<div class="tips enter">跳过<span><img src="../../images/app_arrow_4.png" /></span></div>
+			    </div>
+			    <!--<div class="mui-slider-item"><img src="../../images/start_pages3.png" /></div>-->
+			 	<div class="mui-slider-item">
+			 		<img src="../../images/start_pages3.png" />
+			 		<div class="tips enter">跳过<span><img src="../../images/app_arrow_4.png" /></span></div>
+			 		<div class="app_btn_enter enter" id="app_btn_enter">立即进入></div>
+			 	</div>
+			 </div>
+			  <div class="mui-slider-indicator">
+			  	<!--<span><img class="app_sp_arrow" src="../../images/sp_arrow.png"/></span>-->
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			    <div class="mui-indicator"></div>
+			    <!--<div class="mui-indicator"></div>-->
+			  </div>
+
+			</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script>
+			mui.init();
+			(function($) {
+				var STARPAGES = function() {
+					this.ws = null;
+					return this;
+				}
+				STARPAGES.prototype = {
+					init: function() {
+						this.pageInit(); //页面初始化
+						this.bindEvent(); //事件绑定
+						this.getData(); //获取数据
+					},
+					pageInit: function() {
+						var _this = this;
+
+					},
+					getData: function() {
+						var _this = this;
+
+					},
+					bindEvent: function() {
+						var _this = this;
+						var enter = document.querySelectorAll(".enter")
+						for(var i = 0;i < enter.length;i++){
+							enter[i].addEventListener("tap",function(){
+								var ws = plus.webview.currentWebview();
+								localStorage.setItem("startPages","readed");
+	
+								document.getElementById("app_content").style.opacity = "0";
+	
+								mui.fire(plus.webview.getLaunchWebview(),"updata");
+	
+								setTimeout(function(){
+									//plus.webview.close(ws,"fade-out");
+									ws.close();
+								},200);
+								
+								mui.fire(plus.webview.getLaunchWebview(), "indexLoaded");
+							});
+						}
+					}
+				}
+
+				mui.plusReady(function() {
+					var sp = new STARPAGES();
+					sp.init();
+				});
+			})(mui);
+		</script>
+	</body>
+</html>

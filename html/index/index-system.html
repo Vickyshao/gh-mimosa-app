@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>欢迎</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/app.css" rel="stylesheet" />
+    	<style type="text/css">/** app.css ==> app-001 **/</style>
+    	<style type="text/css">
+    		.mui-slider-item img{display: block;}
+    		html,body,.mui-content,.mui-slider{height: 100%;overflow: hidden;background: #fff;}
+    		.mui-content{transition: opacity .3s;opacity: 1;}
+    		.mui-slider .mui-slider-group{height: 100%;}
+    		.mui-slider-indicator{bottom:20px;}
+    		.mui-slider-indicator .mui-indicator{border:none;box-shadow: none;background:rgba(50,50,50,.2);margin: 0 1px;}
+    		.mui-slider-indicator .mui-active.mui-indicator{background: rgba(50,50,50,.8);}
+    		.app_sp_arrow{position: relative;top:5px;width:14px}
+    		.app_btn_enter{width: 137px;height: 40px;position: absolute;left: 50%;margin-left: -68px;bottom:50px;}
+    		.app_btn_enter img{display: block;width: 100%;}
+    		.app_c92{color: #929292;}
+    		.app_lh24{line-height: 24px;}
+    	</style>
+	</head>
+	<body>
+		<div class="mui-content" id="app_content">
+			<div class="mui-text-center app_pt70">
+			 	<img src="../../images/system.png" / style="width: 25%;">
+			 </div>
+			 <div class="app_pt30 app_c3 mui-text-center app_f18">系统升级维护中</div>
+			 <div class="app_p20 app_c92 mui-text-center app_f14 app_lh24">请稍后进行访问，在此期间，您在平台的投资收益不受影响</div>
+		</div>
+		<script src="../../js/component/mui.min.js"></script>
+		<script>
+			mui.init();
+			(function($) {
+				var STARPAGES = function() {
+					this.ws = null;
+					return this;
+				}
+				STARPAGES.prototype = {
+					init: function() {
+						this.pageInit(); //页面初始化
+						this.bindEvent(); //事件绑定
+						this.getData(); //获取数据
+					},
+					pageInit: function() {
+						var _this = this;
+						plus.webview.currentWebview().setStyle({"popGesture": "none"});
+					},
+					getData: function() {
+						var _this = this;
+
+					},
+					bindEvent: function() {
+						var _this = this;
+						
+					}
+				}
+
+				mui.plusReady(function() {
+					var sp = new STARPAGES();
+					sp.init();
+				});
+			})(mui);
+		</script>
+	</body>
+</html>
